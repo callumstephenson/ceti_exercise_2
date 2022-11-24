@@ -26,11 +26,13 @@ d_c = 0.05;
 % constants
 cf_cst = 0.005;
 g = 9.81;
+rho = 998;
 
 vels_u3 = linspace(1, 2.8, 10);
 for i = 1:length(vels_u3)
-    vels_pure(i) = vel_finder(vels_u3(i), g, cf_cst);
+    vels_pure(i) = split_vel_finder(vels_u3(i), g, cf_cst);
     vels_u4(i) = double(vels_pure(i).u_4(1,1));
     vels_u5(i) = double(vels_pure(i).u_5(1,1));
-
-end
+    p1_val(i) = (1.3 * rho * g) - ((vels_u3(i).^2 * rho) / 2);
+    
+end 
