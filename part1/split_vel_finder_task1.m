@@ -20,8 +20,8 @@ function output = split_vel_finder_task1(n, g, cf)
     d_c = 0.05;
 
     syms u_4 u_5
-    eqn_1 = (u_4.^2 / (2 * g)) * ((4 * cf * l_c / d_c) + 2) ==...
-        (u_5.^2 / (2 * g)) * ((4 * cf * l_b / d_b) + 2) + 4;
+    eqn_1 = (u_4.^2 / (2 * g)) * ((4 * cf * l_c / d_c) + 1) ==...
+        (u_5.^2 / (2 * g)) * ((4 * cf * l_b / d_b) + 1) + 4;
     eqn_2 = (d_a.^2 * n * pi * 0.25) == (d_b.^2 * pi * 0.25)*(u_4 + u_5);
     output = solve(eqn_1, eqn_2);
 end
