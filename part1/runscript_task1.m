@@ -32,7 +32,7 @@ cf_cst = 0.005;
 g = 9.81;
 rho = 998;
 
-vels_u3 = linspace(1, 2.8, 10);
+vels_u3 = linspace(1.0, 2.8, 10);
 for i = 1:length(vels_u3)
     vels_pure(i) = split_vel_finder_task1(vels_u3(i), g, cf_cst);
     vels_u4(i) = double(vels_pure(i).u_4(1,1));
