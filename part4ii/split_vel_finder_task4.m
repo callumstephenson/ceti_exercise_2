@@ -1,4 +1,4 @@
-function output = split_vel_finder_task2(n, g, roughness, rho)
+function output = split_vel_finder_task4(n, g, roughness, rho)
     % pipe len
     l_a = 25;
     l_b = 90;
@@ -24,6 +24,5 @@ function output = split_vel_finder_task2(n, g, roughness, rho)
         (u_5.^2 / (2 * g)) * ((4 * (1.375e-3 * (1 + (2e4 * (roughness / d_b) + (10e3 / (rho * u_5 * d_b))).^(1/3))) * l_b / d_b) + 2) + 4;
     eqn_2 = (d_a.^2 * n) == (d_b.^2)*(u_4 + u_5);
     digits(16)
-    output = vpasolve(eqn_1 && u_4 > 0 && u_5 , eqn_2);
+    output = vpasolve(eqn_1, eqn_2, [u_4 u_5], [2 2]);
 end
-
