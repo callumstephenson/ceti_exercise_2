@@ -1,7 +1,7 @@
 % constants
 
 % pump characterists
-a = 1.96 * 5e5;
+a = 9.8e5;
 b = 1.2e9;
 
 % pipe len
@@ -31,7 +31,7 @@ d_c = 0.05;
 g = 9.81;
 rho = 998;
 
-vels_u3 = linspace(1, 2.8, 10);
+vels_u3 = linspace(1, 3.8, 100);
 for i = 1:length(vels_u3)
     cf_3(i) = cf_finder(vels_u3(i), roughness, d_a);
     vels_pure(i) = split_vel_finder_task4(vels_u3(i), g, roughness, rho);

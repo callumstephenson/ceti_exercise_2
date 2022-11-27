@@ -48,3 +48,6 @@ for i = 1:length(vels_u3)
 end 
 
 plot(vol_flowrate, p2_minus_p1, vol_flowrate, P_pumps);
+xlabel("Volumetric Flowrate m^3 s^{-1}")
+ylabel("Pressure / Pa")
+legend("System Characteristic","Pump Characteristic")
