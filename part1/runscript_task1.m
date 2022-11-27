@@ -11,7 +11,7 @@ l_c = 130;
 l_d = 0;
 
 % roughness
-roughness = 0.0046 * 10.^-3;
+roughness = 4.6e-5;
 
 % heights
 h_0 = 1.3;
